@@ -1,0 +1,45 @@
+.health-form {
+  display: flex;
+  height: 50vh;
+  width: 100%;
+  justify-content: center;
+}
+
+.health-form .title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.starting-health-counter {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  flex-flow: column nowrap;  
+
+}
+
+.counter {
+  display: flex;
+}
+
+.health-value {
+  font-size: 6rem;
+}
+
+.health-form .minus {
+  display: inline-block;
+  font-size: 6rem;
+  margin-right: 2.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+
+.health-form .plus {
+  display:inline-block;
+  font-size: 6rem;
+  margin-left: 2.5rem;
+  color: green;
+  cursor: pointer;
+}

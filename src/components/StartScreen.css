@@ -1,0 +1,15 @@
+.start-screen {
+  background: #333;
+  color: white;
+  height: 100vh;
+}
+
+.start-button {
+  cursor: pointer;
+  background: dodgerblue;
+  width: 200px;
+  text-align: center;
+  padding: 1rem .5rem;
+  margin: 1rem auto;
+  border-radius: 7px;
+}
