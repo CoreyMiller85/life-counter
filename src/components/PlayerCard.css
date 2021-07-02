@@ -1,0 +1,42 @@
+.player-card {
+  background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8)), url('../imgs/art-2.jpeg');
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  flex-flow: column ;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 2px 10px black;
+  border: 2px solid black;
+}
+
+.player-card:nth-child(2) {
+  background-image:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.5)), url('../imgs/art-1.jpeg');
+  background-size: cover;
+}
+
+.player__health {
+  font-size: 96px;
+}
+
+.player__bar {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player__bar .icon {
+  text-shadow: 0px 2px 10px black;
+  cursor: pointer;
+}
+
+.player-card .minus {
+  color: red;
+}
+
+.player-card .plus {
+  color: green;
+}
