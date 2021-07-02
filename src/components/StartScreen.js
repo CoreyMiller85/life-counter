@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HealthForm from "./HealthForm";
 import PlayerForm from "./PlayerForm";
 import PlayerCard from "./PlayerCard";
+import GameButton from "./GameButton";
 import "./StartScreen.css";
 
 const StartScreen = (props) => {
@@ -32,7 +33,7 @@ const StartScreen = (props) => {
 
   return (
     <div className="start-screen">
-      <h1>Life Counter</h1>
+      <h1 className="title">Life Counter</h1>
       <form>
         <HealthForm
           health={props.startingHealth}
@@ -44,9 +45,16 @@ const StartScreen = (props) => {
           updateName={updateName}
           nameValue={nameValue}
         />
-        <button onClick={(e) => submitName(e, nameValue)}>Add Player</button>
+
+        <div className="start__players-container">{playersList}</div>
+
+        <button
+          className="add-player-btn"
+          onClick={(e) => submitName(e, nameValue)}
+        >
+          Add Player
+        </button>
       </form>
-      <div className="start__players-container">{playersList}</div>
       <div
         className="start-button"
         onClick={(e) => {

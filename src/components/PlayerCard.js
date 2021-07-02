@@ -1,19 +1,31 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 
 function PlayerCard(props) {
   return (
-    <div
-      style={{
-        width: "60%",
-        padding: "1rem",
-        backgroundColor: "green",
-        margin: "0px auto",
-        border: "2px solid black",
-        marginBottom: "1rem",
-        textAlign: "center",
-      }}
-    >
-      <h3>{props.playerName}</h3>
+    <div className="player-card">
+      <div className="player__bar">
+        <div
+          className="icon"
+          onClick={(e) => {
+            props.decrementHealth(props.id);
+          }}
+        >
+          <FontAwesomeIcon icon={faMinusCircle} size="4x" className="minus" />
+        </div>
+        <h3 className="player__health">{props.health}</h3>
+        <div
+          className="icon"
+          onClick={(e) => {
+            props.incrementHealth(props.id);
+          }}
+        >
+          <FontAwesomeIcon icon={faPlusCircle} size="4x" className="plus" />
+        </div>
+      </div>
+      <h3>{props.name}</h3>
     </div>
   );
 }

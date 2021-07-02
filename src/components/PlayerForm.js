@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React from 'react';
+import './PlayerForm.css'
 
 function PlayerForm(props) {
   
@@ -14,8 +15,8 @@ function PlayerForm(props) {
 
   return (
     <div className="player-name-form">
-        <label htmlFor="name">Player Name: </label>
-        <input  autoComplete="off" type="text" name="name" onChange={(e) => props.updateName(e)} value={props.nameValue} />
+        <label htmlFor="name" className="name-label">Player Name: </label>
+        <input  autoComplete="off" type="text" name="name" onChange={(e) => props.updateName(e)} value={props.nameValue} className="name-input" />
     </div>
   )
 }
